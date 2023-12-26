@@ -52,11 +52,12 @@ function renderLicenseBadge(license) {
   function generateMarkdown(data) {
     // Add license badge near the top of the README
     const licenseBadge = renderLicenseBadge(data.license);
-    console.log(licenseBadge);
-    console.log("I am here");
-    return `# ${data.title}
-    ${licenseBadge}
-  
+    const licenseLink = renderLicenseLink(data.license);
+    const licenseSection = renderLicenseSection(data.license);
+
+    return `${licenseBadge}
+    # Title ${data.title}
+
     ## Table of Contents
     1. [Description](#description)
     2. [Installation](#installation)

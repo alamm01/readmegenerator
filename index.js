@@ -1,6 +1,6 @@
 const inquirer = require('inquirer');
 const fs = require("fs");
-const generateMarkdown = require("./utils/generateMarkdownold");
+const generateMarkdown = require("./utils/generateMarkdown");
 
 // title, Description, Installation, Usage, License, Contributing, Tests, and Questions
 
