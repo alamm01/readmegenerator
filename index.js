@@ -3,7 +3,6 @@ const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // title, Description, Installation, Usage, License, Contributing, Tests, and Questions
-
 inquirer
   .prompt([
     {
@@ -55,8 +54,7 @@ inquirer
 
   ])
   .then((answers) => {
-    // console.log(`Hello, ${answers.name}! you live in ${answers.state}.`);
-    // console.log(`Your favorite color is ${answers.favColor}.`);
+
     fs.writeFile("./README.md", generateMarkdown(answers), function(err) {
         if (err){
             console.log(err);
